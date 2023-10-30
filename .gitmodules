@@ -1,0 +1,3 @@
+[submodule "EwelinkNET"]
+	path = EwelinkNET
+	url = https://github.com/luisllamasbinaburo/EwelinkNET.git
