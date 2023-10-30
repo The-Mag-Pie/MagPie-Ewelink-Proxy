@@ -9,8 +9,11 @@ namespace MagPie_Ewelink_Proxy
             // Add services to the container.
 
             builder.Services.AddControllers();
+            ServiceHelper.RegisterServices(builder.Services);
 
             var app = builder.Build();
+
+            ServiceHelper.ServiceProvider = app.Services;
 
             // Configure the HTTP request pipeline.
 
