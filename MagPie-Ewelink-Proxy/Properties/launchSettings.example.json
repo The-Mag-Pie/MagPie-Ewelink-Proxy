@@ -1,0 +1,57 @@
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "state",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "EWELINK_USERNAME": "<YOUR_EWELINK_USERNAME>",
+        "EWELINK_PASSWORD": "<YOUR_EWELINK_PASSWORD>",
+        "EWELINK_APP_ID": "<YOUR_EWELINK_APP_ID>",
+        "EWELINK_APP_SECRET": "<YOUR_EWELINK_APP_SECRET>",
+        "EWELINK_REGION": "<YOUR_EWELINK_REGION>",
+        "DEVICE_ID": "<YOUR_EWELINK_DEVICE_ID>"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5071"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "state",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "EWELINK_USERNAME": "<YOUR_EWELINK_USERNAME>",
+        "EWELINK_PASSWORD": "<YOUR_EWELINK_PASSWORD>",
+        "EWELINK_APP_ID": "<YOUR_EWELINK_APP_ID>",
+        "EWELINK_APP_SECRET": "<YOUR_EWELINK_APP_SECRET>",
+        "EWELINK_REGION": "<YOUR_EWELINK_REGION>",
+        "DEVICE_ID": "<YOUR_EWELINK_DEVICE_ID>"
+      }
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/state",
+      "environmentVariables": {
+        "EWELINK_USERNAME": "<YOUR_EWELINK_USERNAME>",
+        "EWELINK_PASSWORD": "<YOUR_EWELINK_PASSWORD>",
+        "EWELINK_APP_ID": "<YOUR_EWELINK_APP_ID>",
+        "EWELINK_APP_SECRET": "<YOUR_EWELINK_APP_SECRET>",
+        "EWELINK_REGION": "<YOUR_EWELINK_REGION>",
+        "DEVICE_ID": "<YOUR_EWELINK_DEVICE_ID>"
+      },
+      "publishAllPorts": true
+    }
+  },
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:16097",
+      "sslPort": 0
+    }
+  }
+}
