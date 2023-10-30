@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+    ewelink-proxy-server:
+        build: .
+        image: ewelinkproxyserver
+        container_name: ewelink-proxy-server
+        restart: always
+        network_mode: bridge
+        ports:
+            - "8123:80/tcp"
+        environment:
+            - EWELINK_USERNAME=<YOUR_EWELINK_USERNAME>
+            - EWELINK_PASSWORD=<YOUR_EWELINK_PASSWORD>
+            - EWELINK_APP_ID=<YOUR_EWELINK_APP_ID>
+            - EWELINK_APP_SECRET=<YOUR_EWELINK_APP_SECRET>
+            - EWELINK_REGION=<YOUR_EWELINK_REGION>
+            - DEVICE_ID=<YOUR_EWELINK_DEVICE_ID>
