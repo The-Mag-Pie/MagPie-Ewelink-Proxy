@@ -7,6 +7,7 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["MagPie-Ewelink-Proxy/MagPie-Ewelink-Proxy.csproj", "MagPie-Ewelink-Proxy/"]
+COPY ["EwelinkNET/EwelinkNet/EwelinkNet.csproj", "EwelinkNET/EwelinkNet/"]
 RUN dotnet restore "MagPie-Ewelink-Proxy/MagPie-Ewelink-Proxy.csproj"
 COPY . .
 WORKDIR "/src/MagPie-Ewelink-Proxy"
