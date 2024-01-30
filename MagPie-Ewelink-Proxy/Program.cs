@@ -1,3 +1,5 @@
+using MagPie_Ewelink_Proxy.Services;
+
 namespace MagPie_Ewelink_Proxy
 {
     public class Program
@@ -6,22 +8,14 @@ namespace MagPie_Ewelink_Proxy
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-
             builder.Services.AddControllers();
-            ServiceHelper.RegisterServices(builder.Services);
+            builder.Services.AddHttpClient();
+            builder.Services.AddSingleton<EwelinkService>();
 
             var app = builder.Build();
 
-            ServiceHelper.ServiceProvider = app.Services;
-
-            // Configure the HTTP request pipeline.
-
             app.UseAuthorization();
-
-
             app.MapControllers();
-
             app.Run();
         }
     }

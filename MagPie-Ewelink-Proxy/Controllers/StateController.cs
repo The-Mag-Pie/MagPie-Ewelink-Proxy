@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MagPie_Ewelink_Proxy.Controllers
 {
-    [Route("[controller]")]
+    [Route("[controller]/{deviceId}")]
     [ApiController]
     public class StateController : ControllerBase
     {
@@ -15,11 +15,11 @@ namespace MagPie_Ewelink_Proxy.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get(string deviceId)
         {
             try
             {
-                return Ok(await _ewelinkService.GetState());
+                return Ok(await _ewelinkService.GetState(deviceId));
             }
             catch (Exception ex)
             {
