@@ -6,13 +6,12 @@ services:
         image: ewelinkproxyserver
         container_name: ewelink-proxy-server
         restart: always
-        network_mode: bridge
         ports:
-            - "8123:80/tcp"
+            - "8000:80/tcp"
         environment:
-            - EWELINK_USERNAME=<YOUR_EWELINK_USERNAME>
+            - EWELINK_EMAIL=<YOUR_EWELINK_EMAIL>
             - EWELINK_PASSWORD=<YOUR_EWELINK_PASSWORD>
+            - EWELINK_COUNTRY_CODE=<YOUR_EWELINK_COUNTRY_CODE>
+            - EWELINK_REGION=<YOUR_EWELINK_REGION>
             - EWELINK_APP_ID=<YOUR_EWELINK_APP_ID>
             - EWELINK_APP_SECRET=<YOUR_EWELINK_APP_SECRET>
-            - EWELINK_REGION=<YOUR_EWELINK_REGION>
-            - DEVICE_ID=<YOUR_EWELINK_DEVICE_ID>

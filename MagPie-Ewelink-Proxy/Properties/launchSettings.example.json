@@ -3,15 +3,15 @@
     "http": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "state",
+      "launchUrl": "state/<DEVICE_ID>",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "EWELINK_USERNAME": "<YOUR_EWELINK_USERNAME>",
-        "EWELINK_PASSWORD": "<YOUR_EWELINK_PASSWORD>",
-        "EWELINK_APP_ID": "<YOUR_EWELINK_APP_ID>",
-        "EWELINK_APP_SECRET": "<YOUR_EWELINK_APP_SECRET>",
-        "EWELINK_REGION": "<YOUR_EWELINK_REGION>",
-        "DEVICE_ID": "<YOUR_EWELINK_DEVICE_ID>"
+        "EWELINK_EMAIL": "<EMAIL>",
+        "EWELINK_PASSWORD": "<PASSWORD>",
+        "EWELINK_COUNTRY_CODE": "<COUNTRY_CODE>",
+        "EWELINK_REGION": "<REGION>",
+        "EWELINK_APP_ID": "<APP_ID>",
+        "EWELINK_APP_SECRET": "<APP_SECRET>"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "http://localhost:5071"
@@ -19,28 +19,28 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "state",
+      "launchUrl": "state/<DEVICE_ID>",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "EWELINK_USERNAME": "<YOUR_EWELINK_USERNAME>",
-        "EWELINK_PASSWORD": "<YOUR_EWELINK_PASSWORD>",
-        "EWELINK_APP_ID": "<YOUR_EWELINK_APP_ID>",
-        "EWELINK_APP_SECRET": "<YOUR_EWELINK_APP_SECRET>",
-        "EWELINK_REGION": "<YOUR_EWELINK_REGION>",
-        "DEVICE_ID": "<YOUR_EWELINK_DEVICE_ID>"
+        "EWELINK_EMAIL": "<EMAIL>",
+        "EWELINK_PASSWORD": "<PASSWORD>",
+        "EWELINK_COUNTRY_CODE": "<COUNTRY_CODE>",
+        "EWELINK_REGION": "<REGION>",
+        "EWELINK_APP_ID": "<APP_ID>",
+        "EWELINK_APP_SECRET": "<APP_SECRET>"
       }
     },
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/state",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/state/<DEVICE_ID>",
       "environmentVariables": {
-        "EWELINK_USERNAME": "<YOUR_EWELINK_USERNAME>",
-        "EWELINK_PASSWORD": "<YOUR_EWELINK_PASSWORD>",
-        "EWELINK_APP_ID": "<YOUR_EWELINK_APP_ID>",
-        "EWELINK_APP_SECRET": "<YOUR_EWELINK_APP_SECRET>",
-        "EWELINK_REGION": "<YOUR_EWELINK_REGION>",
-        "DEVICE_ID": "<YOUR_EWELINK_DEVICE_ID>"
+        "EWELINK_EMAIL": "<EMAIL>",
+        "EWELINK_PASSWORD": "<PASSWORD>",
+        "EWELINK_COUNTRY_CODE": "<COUNTRY_CODE>",
+        "EWELINK_REGION": "<REGION>",
+        "EWELINK_APP_ID": "<APP_ID>",
+        "EWELINK_APP_SECRET": "<APP_SECRET>"
       },
       "publishAllPorts": true
     }
