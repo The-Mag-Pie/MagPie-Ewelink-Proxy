@@ -29,10 +29,8 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         context: .
-        no-cache: true
-        pull: true
         push: true
-        tags: The-Mag-Pie/magpie-ewelink-proxy:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/magpie-ewelink-proxy:latest
 
   deploy:
     needs: build
@@ -46,4 +44,5 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         password: ${{ secrets.SSH_PASSWORD }}
         script: |
-          ./startup-scripts/ewelink-proxy-server.sh
+          cd ./compose-files
+          docker compose -f ewelink-proxy-server.yml -p api-server up -d --pull always
