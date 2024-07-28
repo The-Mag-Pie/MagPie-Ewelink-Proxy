@@ -44,5 +44,6 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         password: ${{ secrets.SSH_PASSWORD }}
         script: |
+          docker login
           cd ./compose-files
           docker compose -f ewelink-proxy-server.yml -p api-server up -d --pull always
