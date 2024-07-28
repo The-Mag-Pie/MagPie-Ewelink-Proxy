@@ -1,4 +1,4 @@
-name: Run Docker Container
+name: (Manual) Build + Deploy
 
 on:
   workflow_dispatch:
@@ -28,6 +28,7 @@ jobs:
         tags: ${{ secrets.DOCKER_USERNAME }}/magpie-ewelink-proxy:latest
 
   deploy:
+    needs: build
     runs-on: self-hosted
 
     steps:
