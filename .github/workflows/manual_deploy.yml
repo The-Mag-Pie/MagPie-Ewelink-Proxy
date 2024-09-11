@@ -2,19 +2,12 @@ name: (Manual) Deploy
 
 on:
   workflow_dispatch:
+  workflow_call:
 
 jobs:
   deploy:
-    runs-on: self-hosted
-
-    steps:
-    - name: Deploy via SSH
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: ${{ secrets.REMOTE_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        password: ${{ secrets.SSH_PASSWORD }}
-        script: |
-          docker login
-          cd ./compose-files
-          docker compose -f ewelink-proxy-server.yml -p api-server up -d --pull always
+    uses: The-Mag-Pie/workflows/.github/workflows/deploy.yml@main
+    with:
+      compose-file-name: ewelink-proxy-server.yml
+      project-name: api-server
+    secrets: inherit
